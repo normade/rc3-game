@@ -8,6 +8,7 @@ SECRET_KEY = os.getenv(
 )
 
 INSTALLED_APPS = [
+    "chatterbot.ext.django_chatterbot",
     "gamebot.apps.GamebotConfig",
     "django.contrib.admin",
     "django.contrib.auth",

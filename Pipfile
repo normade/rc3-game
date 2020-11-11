@@ -11,6 +11,9 @@ gunicorn = "*"
 dj-database-url = "*"
 whitenoise = "*"
 psycopg2-binary = "*"
+chatterbot = "==1.0.8"
+chatterbot-corpus = "*"
+spacy = "*"
 
 [requires]
 python_version = "3.6"
