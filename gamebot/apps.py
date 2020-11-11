@@ -2,4 +2,4 @@ from django.apps import AppConfig
 
 
 class GamebotConfig(AppConfig):
-    name = 'gamebot'
+    name = "gamebot"
