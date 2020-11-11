@@ -1,5 +1,6 @@
 from pathlib import Path
 import os
+from chatterbot import comparisons, response_selection
 
 BASE_DIR = Path(__file__).resolve().parent.parent.parent
 
@@ -86,3 +87,20 @@ STATIC_ROOT = BASE_DIR / "staticfiles"
 STATICFILES_DIRS = [
     BASE_DIR / "static",
 ]
+
+# Bot settings
+CORPUS_DIR = BASE_DIR / "gamebot/corpus/"
+
+
+CHATTERBOT = {
+    "name": "Wolfgang von Beta",
+    "logic_adapters": [
+        {
+            "import_path": "chatterbot.logic.BestMatch",
+            "statement_comparison_function": comparisons.LevenshteinDistance,
+            "response_selection_method": response_selection.get_random_response,
+        },
+    ],
+    "trainer": "chatterbot.trainers.ChatterBotCorpusTrainer",
+    "training_data": [os.path.join(CORPUS_DIR, "bot.yml")],
+}
