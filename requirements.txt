@@ -3,7 +3,7 @@ gunicorn
 dj-database-url
 whitenoise
 psycopg2-binary
-ChatterBot==1.0.8
+git+https://github.com/normade/ChatterBot.git
 chatterbot-corpus
 spacy
 https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-2.3.1/en_core_web_sm-2.3.1.tar.gz#egg=en_core_web_sm==2.3.1
