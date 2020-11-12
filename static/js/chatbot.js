@@ -28,6 +28,7 @@ const addUserInputToLog = (inputValue) => {
 }
 
 const addBotAnswerToLog = (botResponse) => {
+    emptyChatContainer();
     const botContainer = document.querySelector("#chat");
     const tag = document.createElement("p");
     const containerRow = document.createElement("div");
