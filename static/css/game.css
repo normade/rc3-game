@@ -1,8 +1,15 @@
 html, body {
-    background-color: #cecece;
+    background-image: url('background.gif');
+    color: blue;
+}
+
+#user-input {
+    width: 50%;
+    height: 2rem;
 }
 
 .bot {
     margin: auto;
     width: 50%;
+    text-align: center;
 }
