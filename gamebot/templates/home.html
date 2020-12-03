@@ -43,10 +43,9 @@
 
     {% csrf_token %}
     <script>
-        {#var getConversationUrl = '{% url "get_conversation" %}';#}
         var postMessageUrl = '{% url "post_message" %}';
         var csrftoken = Cookies.get('csrftoken');
-        var sessionId = Cookies.get('sessionid') ? Cookies.get('sessionid') : "";
+        console.log("Nice try! And, do you see something interesting? Better talk to the bot!")
     </script>
 </body>
 </html>
