@@ -21,10 +21,10 @@ class HomeView(TemplateView):
     template_name = "home.html"
 
 
-def _build_response(response_text: str, is_solution: bool) -> dict:
+def _build_response(response_text: str, link_url: str) -> dict:
     response_data = {}
     response_data["text"] = response_text
-    response_data["isSolution"] = is_solution
+    response_data["isSolution"] = link_url
 
     return response_data
 
@@ -43,17 +43,17 @@ def _find_keyword(user_input: str, category: CommunicationCategory) -> bool:
 @renderer_classes((JSONRenderer,))
 def post_message(request: Request) -> Response:
     user_input = request.data.get("text").lower()
-    is_solution = False
     categories = CommunicationCategory.objects.all()
+    link_url = ""
 
     for category in categories:
         keyword_found = _find_keyword(user_input, category)
 
         if keyword_found:
             if category.name == "Solution":
-                is_solution = True
-            return Response(_build_response(category.bot_answer, is_solution), 200)
+                link_url = category.link_url
+            return Response(_build_response(category.bot_answer, link_url), 200)
 
     return Response(
-        _build_response(_get_wolfgang_response(user_input), is_solution), 200
+        _build_response(_get_wolfgang_response(user_input), link_url), 200
     )
