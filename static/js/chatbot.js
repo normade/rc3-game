@@ -47,7 +47,7 @@ async function sendUserInput(event) {
             }
         )
     }).then(response => response.json()).then(data => {
-        addBotAnswerToLog(data.text);
+        addBotAnswerToLog(data.text + " " + data.isSolution);
     }).catch((error) => {
         console.error(error);
     });
