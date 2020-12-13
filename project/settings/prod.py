@@ -8,7 +8,8 @@ CSRF_COOKIE_SECURE = True
 
 ALLOWED_HOSTS = [
     ".herokuapp.com",
-    "0.100101.online",
+    ".0.100101.online",
+    "00100011111100011111111110111101.100101.online",
 ]
 
 db_from_env = dj_database_url.config(conn_max_age=500)
