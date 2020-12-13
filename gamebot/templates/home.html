@@ -25,7 +25,7 @@
                 </p>
             </td>
             <td style="vertical-align:top;box-shadow: 10px 0px 10px silver;">
-                <table style="width: 100%;border: outset 1px blue;">
+                <table style="width: 100%;">
                     <tr>
                         <td style="vertical-align:top;padding: 50px 0;text-align: center;">
                             <a href="https://11101110001010110100010001001010.100101.online/"><img src="{% static 'img/gifs/click-here.gif' %}" alt="Click here" style="vertical-align: middle; margin-right: 20px;"/></a>
@@ -41,7 +41,7 @@
                                         <label for="user-input"></label>
                                         <input id="user-input" class="form-control" type="text" placeholder="Search for the one thing ..." />
                                         <div class="input-group-append">
-                                            <button id="submit-btn" class="ask-btn">Ask!</button>
+                                            <button id="submit-btn" class="ask-btn">Search!</button>
                                         </div>
                                     </div>
                                 </form>
@@ -53,15 +53,15 @@
                 </table>
             </td>
             <td style="vertical-align:top; margin: 0; border-left: 5px solid grey; white-space: nowrap; border-top-width: 0px; height: 3000px;text-align: center;">
-                <img style="background-color: aliceblue" src="{% static 'img/gifs/enter.gif' %}" alt="Click here" id="enter" style="cursor:pointer;"/>
+                <img style="background-color: aliceblue; cursor:pointer;" src="{% static 'img/gifs/enter.gif' %}" alt="Click here" id="enter" />
             </td>
         </tr>
     </table>
-    <img src="{% static 'img/rc3-logo.png' %}" alt="rC3 logo" width="50" height="50" style="position: absolute; right: 50px; bottom: 50px;"/>
-    <div id="game-description" style="position: absolute; top: 50vh; right: 0;background-color: blue;padding: 50px;color: white;width: 100vw;text-align:center;text-transform: uppercase;display:none;">
+    <a href="https://rc3.world/" target="_blank"><img src="{% static 'img/rc3-logo.png' %}" alt="rC3 logo" width="50" height="50" style="position: absolute; right: 50px; bottom: 50px;"/></a>
+    <div id="game-description" style="position: absolute; top: 50vh;background-color: blue;padding: 50px;color: white;width:500px;text-align:center;text-transform: uppercase;display:none;">
         Once upon a time there was the idea of the world wide web, which is free like the birds in the sky and as wide as the horizon, boundless for everyone, a creative place of joy, solidarity and love... It is the year 2020 and the web is... well, broken? What has happened, what have we done? - Can you manage to get out of it as fast as possible, because you still remember this idea from back then? Find your way through the terrible sites of todays web.
         <br/>
-        <button>Go!</button>
+        <button id="closeDescription">Ok</button>
     </div>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
     <script src="{% static 'cookiejs/js.cookie.min.js' %}"></script>
@@ -78,6 +78,10 @@
         $('#enter').click(() => {
             $('#game-description').show();
         })
+         $('#closeDescription').click(() => {
+            $('#game-description').hide();
+        })
+
     </script>
 </body>
 </html>
