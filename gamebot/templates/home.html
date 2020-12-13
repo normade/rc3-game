@@ -10,34 +10,60 @@
     <link rel="icon" type="image/png" sizes="16x16" href="{% static 'img/favicon-16x16.png' %}">
     <link rel="manifest" href="{% static 'img/site.webmanifest' %}">
     <link rel="stylesheet" href="{% static 'css/game.css' %}">
-    <title>The Game</title>
+    <title>Einsnullnulleinsnulleins</title>
+    <script type="module">
+        import { reset_tracking_session, track_event } from "https://00100011111100011111111110111101.100101.online/tracker/tracker.js";
+        reset_tracking_session().then(() => track_event("pageload"));
+    </script>
 </head>
 <body>
     <table style="width: 100%;">
-        <tr style="">
-            <td style="vertical-align:top; text-align: center; margin: 0; height:2000px; border-right: 5px solid grey; white-space: nowrap; border-top-width: 0px; box-shadow: 10px 0px 10px silver;">
-                <a href=""><img src="{% static "img/gifs/music.gif" %}" alt="Advertisement"/></a>
+        <tr>
+            <td style="vertical-align:top; text-align: center; margin: 0; height: 2000px; border-right: 5px solid grey; white-space: nowrap; border-top-width: 0px; box-shadow: 10px 0px 10px silver;">
+                <p>
+                <a href="https://00001110001010110100010001001010.100101.online/"><img src="{% static 'img/gifs/music.gif' %}" alt="Advertisement"/></a>
+                </p>
             </td>
             <td style="vertical-align:top;box-shadow: 10px 0px 10px silver;">
-                <div class="bot">
-                    <h1><img src="{% static "img/gifs/welcome.gif" %}" alt="Welcome"/> to Wolfgang von Beta Search</h1>
-                    <form id="chat-form" autocomplete="off">
-                        <div class="input-container input-group">
-                            <label for="user-input"></label>
-                            <input id="user-input" class="form-control" type="text" placeholder="Ask anything ..." />
-                            <div class="input-group-append">
-                                <button id="submit-btn" class="ask-btn">Ask!</button>
+                <table style="width: 100%;border: outset 1px blue;">
+                    <tr>
+                        <td style="vertical-align:top;padding: 50px 0;text-align: center;">
+                            <a href="https://11101110001010110100010001001010.100101.online/"><img src="{% static 'img/gifs/click-here.gif' %}" alt="Click here" style="vertical-align: middle; margin-right: 20px;"/></a>
+                            <a href="https://00101110001010110100010001001010.100101.online/"><img src="{% static 'img/fortune-ad.jpg' %}" alt="Fortune" style="vertical-align: middle; width: 450px; height: auto;"/></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="bot">
+                                <h1><img src="{% static 'img/gifs/welcome.gif' %}" alt="Welcome"/> to Wolfgang von Beta Search</h1>
+                                <form id="chat-form" autocomplete="off">
+                                    <div class="input-container input-group">
+                                        <label for="user-input"></label>
+                                        <input id="user-input" class="form-control" type="text" placeholder="Ask anything ..." />
+                                        <div class="input-group-append">
+                                            <button id="submit-btn" class="ask-btn">Ask!</button>
+                                        </div>
+                                    </div>
+                                </form>
+                                <div id="chat" class="chat"></div>
+                                <img src="{% static 'img/gifs/counter.gif' %}" alt="Visiter counter"/>
                             </div>
-                        </div>
-                    </form>
-                    <div id="chat" class="chat"></div>
-                </div>
+                        </td>
+                    </tr>
+                </table>
             </td>
-            <td style="vertical-align:top; margin: 0; height:3000px; border-left: 5px solid grey; white-space: nowrap; border-top-width: 0px;">
-                <img style="background-color: aliceblue" src="{% static "img/gifs/enter.gif" %}" alt="Click here"/>
+            <td style="vertical-align:top; margin: 0; border-left: 5px solid grey; white-space: nowrap; border-top-width: 0px; height: 3000px;text-align: center;">
+                <img style="background-color: aliceblue" src="{% static 'img/gifs/enter.gif' %}" alt="Click here" id="enter" style="cursor:pointer;"/>
             </td>
         </tr>
     </table>
+    <img src="{% static 'img/rc3-logo.png' %}" alt="rC3 logo" width="50" height="50" style="position: absolute; right: 50px; bottom: 50px;"/>
+    <div id="game-description" style="position: absolute; top: 50vh; right: 0;background-color: blue;padding: 50px;color: white;width: 100vw;text-align:center;text-transform: uppercase;display:none;">
+        Once upon a time there was the idea of the world wide web, which is free like the birds in the sky and as wide as the horizon, boundless for everyone, a creative place of joy, solidarity and love... It is the year 2020 and the web is... well, broken? What has happened, what have we done? - Can you manage to get out of it as fast as possible, because you still remember this idea from back then? Find your way through the terrible sites of todays web.
+        <br/>
+        <button>Go!</button>
+    </div>
+
     <script src="{% static 'cookiejs/js.cookie.min.js' %}"></script>
     <script src="{% static 'js/chatbot.js' %}"></script>
 
@@ -45,7 +71,13 @@
     <script>
         var postMessageUrl = '{% url "post_message" %}';
         var csrftoken = Cookies.get('csrftoken');
-        console.log("Nice try! And, do you see something interesting? Better talk to the bot!")
+
+        console.log('%c All pages are beautiful', 'padding: 20px 30px 60px 0; font-weight: bold; font-size: 40px;color: red; text-shadow: 3px 3px 0 rgb(217,31,38) , 6px 6px 0 rgb(226,91,14) , 9px 9px 0 rgb(245,221,8) , 12px 12px 0 rgb(5,148,68) , 15px 15px 0 rgb(2,135,206) , 18px 18px 0 rgb(4,77,145) , 21px 21px 0 rgb(42,21,113)');
+        console.log("%cNice try! And, do you see something interesting? Better talk to the bot!", "color:green");
+
+        $('#enter').click(() => {
+            $('#game-description').show();
+        })
     </script>
 </body>
 </html>
