@@ -36,6 +36,10 @@ def _get_wolfgang_response(user_input: str) -> str:
 
 def _find_keyword(user_input: str, category: CommunicationCategory) -> bool:
     keyword_list = category.accepted_keywords.split(",")
+    if category.name == "Solution":
+        for keyword in keyword_list:
+            if keyword in user_input:
+                return True
     return user_input in keyword_list
 
 
