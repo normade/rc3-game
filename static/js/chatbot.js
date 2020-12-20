@@ -58,6 +58,22 @@ const addEventListenerToForm = () => {
     chatForm.addEventListener("submit", sendUserInput, false);
 }
 
+setInterval(function() {
+tp.classList.remove("animate");
+}, 60000); // remove after 60s
+
+setInterval(function() {
+tp.classList.add("animate");
+}, 120000); // animate every 2min
+
+
 window.onload = (event) => {
     addEventListenerToForm();
 };
+
+const tp = document.getElementById("flying-toiletpaper");
+tp.addEventListener("click", function(){
+    track_event("flying-toiletpaper")
+    alert("Yay! Achievement received!");
+});
+

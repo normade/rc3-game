@@ -32,3 +32,23 @@ html, body {
     font-size: 2rem;
 }
 
+#flying-toiletpaper {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top: 200px;
+  left: -100px;
+  cursor: pointer;
+}
+.animate {
+  animation-name: slidein;
+  animation-duration: 10s;
+}
+@keyframes slidein {
+  from {
+    left: 0;
+  }
+  to {
+    left: 100%;
+  }
+}
