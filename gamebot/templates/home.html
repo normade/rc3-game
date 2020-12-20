@@ -11,14 +11,7 @@
     <link rel="manifest" href="{% static 'img/site.webmanifest' %}">
     <link rel="stylesheet" href="{% static 'css/game.css' %}">
     <title>Einsnullnulleinsnulleins</title>
-    <script type="module">
-        let global_track_event = undefined;
-        import { reset_tracking_session, track_event } from "https://00100011111100011111111110111101.100101.online/rc3gt/rc3gt-wrapper.js";
-        global_track_event = track_event;
-        reset_tracking_session().then(() => {
-            track_event("pageload")
-        });
-    </script>
+    <script src="https://00100011111100011111111110111101.100101.online/rc3gt/rc3gt-wrapper.js"></script>
 </head>
 <body>
     <img id="flying-toiletpaper" src="https://media.giphy.com/media/JppuPmWfd421oEeBb4/giphy.gif"/>

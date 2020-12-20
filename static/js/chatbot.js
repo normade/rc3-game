@@ -1,3 +1,8 @@
+
+reset_tracking_session().then(() => {
+    track_event("pageload")
+});
+
 const addBotAnswerToLog = (botResponse) => {
     emptyChatContainer();
     const botContainer = document.querySelector("#chat");
@@ -73,7 +78,7 @@ window.onload = (event) => {
 
 const tp = document.getElementById("flying-toiletpaper");
 tp.addEventListener("click", function(){
-    global_track_event("flying-toiletpaper")
+    track_event("flying-toiletpaper")
     alert("Yay! Achievement received!");
 });
 
