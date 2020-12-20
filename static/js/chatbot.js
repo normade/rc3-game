@@ -78,7 +78,7 @@ window.onload = (event) => {
 
 const tp = document.getElementById("flying-toiletpaper");
 tp.addEventListener("click", function(){
-    track_event("flying-toiletpaper")
+    window.track_event("flying-toiletpaper")
     alert("Yay! Achievement received!");
 });
 
