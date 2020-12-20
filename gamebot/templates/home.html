@@ -38,25 +38,27 @@
                     </tr>
                     <tr>
                         <td>
-                            <div class="bot">
-                                <img src="{% static 'img/gifs/welcome.gif' %}" alt="Welcome"/>
-                                <h1>to Wolfgang the Search Bot</h1>
-                                <form id="chat-form" autocomplete="off">
-                                    <div class="input-container input-group">
-                                        <label for="user-input"></label>
-                                        <input id="user-input" class="form-control" type="text" placeholder="Tell me what you are looking for ..." />
-                                        <div class="input-group-append">
-                                            <button id="submit-btn" class="ask-btn">Search!</button>
+                            <tr>
+                                <div class="bot">
+                                    <img src="{% static 'img/gifs/welcome.gif' %}" alt="Welcome"/>
+                                    <h1>to Wolfgang the Search Bot</h1>
+                                    <form id="chat-form" autocomplete="off">
+                                        <div class="input-container input-group">
+                                            <label for="user-input"></label>
+                                            <input id="user-input" class="form-control" type="text" placeholder="Tell me what you are looking for ..." />
+                                            <div class="input-group-append">
+                                                <button id="submit-btn" class="ask-btn">Search!</button>
+                                            </div>
                                         </div>
-                                    </div>
-                                </form>
-                                <div id="chat" class="chat"></div>
-                            </div>
+                                    </form>
+                                    <div id="chat" class="chat"></div>
+                                </div>
+                            </tr>
+                            <tr>
+                                <a href="https://www.opentechschool.org/cities/leipzig" target="_blank"><img src="{% static 'img/ots-banner.jpg' %}" alt="ots banner" style="width: 450px; height: auto;"/></a>
+                                <img src="{% static 'img/gifs/counter.gif' %}" alt="Visiter counter"/>
+                            </tr>
                         </td>
-                    </tr>
-                    <tr>
-                        <a href="https://www.opentechschool.org/cities/leipzig" target="_blank"><img src="{% static 'img/gifs/ots-banner.jpg' %}" alt="ots banner"/></a>
-                        <img src="{% static 'img/gifs/counter.gif' %}" alt="Visiter counter"/>
                     </tr>
                 </table>
             </td>
