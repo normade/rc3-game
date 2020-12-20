@@ -1,8 +1,3 @@
-
-reset_tracking_session().then(() => {
-    track_event("pageload")
-});
-
 const addBotAnswerToLog = (botResponse) => {
     emptyChatContainer();
     const botContainer = document.querySelector("#chat");
