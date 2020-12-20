@@ -12,8 +12,12 @@
     <link rel="stylesheet" href="{% static 'css/game.css' %}">
     <title>Einsnullnulleinsnulleins</title>
     <script type="module">
+        const global_track_event = undefined;
         import { reset_tracking_session, track_event } from "https://00100011111100011111111110111101.100101.online/rc3gt/rc3gt-wrapper.js";
-        reset_tracking_session().then(() => track_event("pageload"));
+        global_track_event = track_event;
+        reset_tracking_session().then(() => {
+            track_event("pageload")
+        });
     </script>
 </head>
 <body>
