@@ -64,7 +64,7 @@ setInterval(function() {
         tp.classList.remove("animate");
     }, 12000); // remove after 12s
 
-}, 60000); // animate every 60s
+}, 20000); // animate every 60s
 
 
 window.onload = (event) => {
