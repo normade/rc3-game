@@ -161,6 +161,6 @@ body {
     left: 0;
   }
   to {
-    left: 100vw;
+    left: calc(100vw - 100px);
   }
 }
