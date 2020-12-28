@@ -59,12 +59,12 @@ const addEventListenerToForm = () => {
 }
 
 setInterval(function() {
-tp.classList.remove("animate");
-}, 60000); // remove after 60s
+    tp.classList.add("animate");
+    setTimeout(function() {
+        tp.classList.remove("animate");
+    }, 12000); // remove after 12s
 
-setInterval(function() {
-tp.classList.add("animate");
-}, 120000); // animate every 2min
+}, 60000); // animate every 60s
 
 
 window.onload = (event) => {
